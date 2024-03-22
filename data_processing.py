@@ -58,3 +58,12 @@ plt.xlabel('Neighborhood')
 plt.ylabel('Price')
 plt.show()
 
+df = pd.get_dummies(df, columns=['Neighborhood'])
+
+# Correlation Heatmap
+plt.figure(figsize=(10, 8))
+corr = df.corr()
+sns.heatmap(corr, annot=True, cmap='coolwarm')
+plt.title('Correlation Heatmap')
+plt.show()
+
