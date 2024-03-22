@@ -18,9 +18,43 @@ df.dropna(inplace=True)
 
 sns.set(style='whitegrid', context='notebook')
 
+# Distribution of Property Prices
 plt.figure(figsize=(10, 6))
 sns.histplot(data=df, x='Price', kde=True)
 plt.title('Distribution of Property Prices')
 plt.xlabel('Price')
 plt.ylabel('Frequency')
 plt.show()
+
+# Price vs Square Feet
+plt.figure
+sns.scatterplot(data=df, x='SquareFeet', y='Price')
+plt.title('Price vs Square Feet')
+plt.xlabel('Square Feet')
+plt.ylabel('Price')
+plt.show()
+
+# Price vs Number of Bedrooms
+plt.figure(figsize=(10, 6))
+sns.boxplot(data=df, x='Bedrooms', y='Price')
+plt.title('Price Distribution by Number of Bedrooms')
+plt.xlabel('Number of Bedrooms')
+plt.ylabel('Price')
+plt.show()
+
+# Price vs Number of Bathrooms
+plt.figure(figsize=(10, 6))
+sns.boxplot(data=df, x='Bathrooms', y='Price')
+plt.title('Price Distribution by Number of Bathrooms')
+plt.xlabel('Number of Bathrooms')
+plt.ylabel('Price')
+plt.show()
+
+# Price by Location
+plt.figure(figsize=(10, 6))
+sns.boxplot(data=df, x='Neighborhood', y='Price')
+plt.title('Price Distribution by Location')
+plt.xlabel('Neighborhood')
+plt.ylabel('Price')
+plt.show()
+
