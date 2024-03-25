@@ -1,9 +1,3 @@
-"""
-This script performs data processing and analysis on a housing dataset.
-It includes loading the data, handling missing values and duplicates, visualizing data through graphs,
-performing feature engineering, and training and evaluating machine learning models.
-"""
-
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
